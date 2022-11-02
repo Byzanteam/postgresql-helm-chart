@@ -1,0 +1,9 @@
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    {{- include "postgresql-helm-chart.labels" . | nindent 4 }}
+  name: {{ include "postgresql-helm-chart.fullname" . }}-env
+data:
+  {{- .Files.Get "app-env.yml" | nindent 2}}
