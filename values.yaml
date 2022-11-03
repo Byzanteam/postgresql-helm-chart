@@ -38,6 +38,10 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
+# postgres environment variables
+env:
+  POSTGRES_PASSWORD: postgres
+  POSTGRES_USER: postgres
 
 restartPolicy: Always
 

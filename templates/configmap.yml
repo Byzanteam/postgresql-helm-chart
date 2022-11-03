@@ -6,4 +6,4 @@ metadata:
     {{- include "postgresql-helm-chart.labels" . | nindent 4 }}
   name: {{ include "postgresql-helm-chart.fullname" . }}-env
 data:
-  {{- .Files.Get "app-env.yml" | nindent 2}}
+  {{- .Values.env | toYaml | nindent 2}}
